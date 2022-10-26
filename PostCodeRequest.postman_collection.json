@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "2733f3b6-141f-45d7-93b2-fe3e0233f831",
+		"name": "PostCodeRequest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4792224"
+	},
+	"item": [
+		{
+			"name": "Add-Suburbs",
+			"protocolProfileBehavior": {
+				"followOriginalHttpMethod": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"postalCodeEntity\": [ {\r\n    \"postCode\": 2055,\r\n    \"suburbs\": [\r\n       \"NORTH SYDNEY, NSW\"\r\n    ]}\r\n  ,\r\n  {\r\n \"postCode\": 3000,\r\n    \"suburbs\": [\r\n        \"MELBOURNE, VIC\"\r\n       \r\n    ]\r\n\r\n  },\r\n\r\n  {\r\n \"postCode\": \"3001\",\r\n    \"suburbs\": [\r\n        \"MELBOURNE, VIC\"\r\n       \r\n    ]\r\n\r\n  },\r\n\r\n  {\r\n     \"postCode\": \"3045\",\r\n    \"suburbs\": [\r\n        \"MELBOURNE AIRPORT, VIC\"\r\n       \r\n    ]  \r\n  },\r\n    {\r\n     \"postCode\": \"3207\",\r\n    \"suburbs\": [\r\n        \"PORT MELBOURNE, VIC\"\r\n       \r\n    ]  \r\n  },\r\n    {\r\n     \"postCode\": \"4001\",\r\n    \"suburbs\": [\r\n        \"BRISBANE, QLD\"\r\n       \r\n    ]  \r\n  },\r\n    {\r\n     \"postCode\": \"4000\",\r\n    \"suburbs\": [\r\n        \"BRISBANE ADELAIDE STREET, QLD\"\r\n       \r\n    ]  \r\n  },\r\n    {\r\n     \"postCode\": \"4000\",\r\n    \"suburbs\": [\r\n        \"BRISBANE CITY, QLD\"\r\n       \r\n    ]  \r\n  },\r\n    {\r\n     \"postCode\": \"4000\",\r\n    \"suburbs\": [\r\n        \"BRISBANE GPO, QLD\"\r\n       \r\n    ]  \r\n  }\r\n  ]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/postcodes/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postcodes",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-List os suburbs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "postcodes",
+						"value": "452001,452002,452003",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/postcodes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postcodes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
